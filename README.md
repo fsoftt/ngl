@@ -2,7 +2,7 @@
 
 Sitio de la **Banda Músico Marcial Nueva Generación Latina** (Dosquebradas, Risaralda), publicado con GitHub Pages.
 
-- `index.html`: inicio (portada, nosotros, secciones, galería, estudiante del mes y llamado a donar)
+- `index.html`: inicio (portada, nosotros, secciones, proyecto sinfónico, formulario de inscripción, galería, estudiante del mes y llamado a donar)
 - `staff.html`: director, estudiante del mes y profesores
 - `donar.html`: medios de donación con botón de copiar y donaciones en especie
 - `admin.html`: **panel para editar el contenido** sin tocar código
@@ -47,6 +47,12 @@ Además, revisa estos datos:
 - [ ] WhatsApp y correo de contacto. Al poner el WhatsApp aparece el botón flotante.
 - [ ] Horario y lugar de ensayos
 - [ ] Enlaces de cada publicación de la galería a Instagram o TikTok
+
+## Formulario de inscripción
+
+El formulario de la página de inicio no guarda datos en ningún servidor. Al enviarlo, abre un chat de WhatsApp con el número configurado (hoy +57 302 3163683) y deja el mensaje escrito con el nombre, teléfono, instrumento y observaciones. La persona solo tiene que pulsar *Enviar*.
+
+El número, las opciones de instrumento y los textos se cambian en el panel, pestaña **Inscripción**.
 
 ## Estructura
 

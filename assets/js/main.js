@@ -20,6 +20,8 @@
     gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/>',
     calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
     sparkles: '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M17 5h4M5 17v4M3 19h4"/>',
+    pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+    check: '<path d="M20 6L9 17l-5-5"/>',
     copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
     link: '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>',
     mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/>',
@@ -51,6 +53,7 @@
       ["index.html#nosotros", "Nosotros", ""],
       ...(c.symphonic && c.symphonic.show ? [["index.html#sinfonico", "Sinfónico", ""]] : []),
       ["index.html#galeria", "Galería", ""],
+      ...(c.signup && c.signup.show ? [["index.html#inscripcion", "Inscríbete", ""]] : []),
       ["staff.html", "Staff", "staff"]
     ];
     const el = document.getElementById("site-header");
@@ -109,6 +112,7 @@
               <li><a href="index.html#secciones">Secciones</a></li>
               ${c.symphonic && c.symphonic.show ? `<li><a href="index.html#sinfonico">Proyecto sinfónico</a></li>` : ""}
               <li><a href="index.html#galeria">Galería</a></li>
+              ${c.signup && c.signup.show ? `<li><a href="index.html#inscripcion">Inscripciones</a></li>` : ""}
               <li><a href="staff.html">Staff</a></li>
               <li><a href="donar.html">Donar</a></li>
             </ul>
@@ -156,7 +160,9 @@
             <p class="lead">${esc(h.text)}</p>
             <div class="hero-actions">
               <a class="btn btn-gold" href="donar.html">${icon("heart")} Apoya a la banda</a>
-              <a class="btn btn-outline" href="#nosotros">Conócenos</a>
+              ${c.signup && c.signup.show
+                ? `<a class="btn btn-outline" href="#inscripcion">${icon("pen")} Inscríbete</a>`
+                : `<a class="btn btn-outline" href="#nosotros">Conócenos</a>`}
             </div>
             <div class="hero-social">${socialLinks(c.site)}</div>
           </div>
@@ -219,6 +225,8 @@
 
       ${renderSymphonic(c)}
 
+      ${renderSignup(c)}
+
       <section class="section section-alt" id="galeria">
         <div class="container">
           <div class="section-head center reveal">
@@ -270,9 +278,12 @@
   function renderSymphonic(c) {
     const s = c.symphonic;
     if (!s || !s.show) return "";
-    const link = c.site.whatsapp
-      ? waLink(c.site.whatsapp, "¡Hola NGL! Quiero información sobre el proyecto sinfónico.")
-      : c.site.instagram;
+    const link = c.signup && c.signup.show
+      ? "#inscripcion"
+      : c.site.whatsapp
+        ? waLink(c.site.whatsapp, "¡Hola NGL! Quiero información sobre el proyecto sinfónico.")
+        : c.site.instagram;
+    const external = !link.startsWith("#");
     return `
       <section class="section symphonic" id="sinfonico">
         <div class="staff-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
@@ -286,7 +297,7 @@
               ${(s.highlights || []).map((hl) => `
                 <li><span class="hl-icon">${icon(hl.icon)}</span><div><strong>${esc(hl.title)}</strong><span>${esc(hl.text)}</span></div></li>`).join("")}
             </ul>
-            ${s.cta && link ? `<a class="btn btn-dark" href="${esc(link)}" target="_blank" rel="noopener">${icon("music")} ${esc(s.cta)}</a>` : ""}
+            ${s.cta && link ? `<a class="btn btn-dark" href="${esc(link)}"${external ? ' target="_blank" rel="noopener"' : ""}>${icon("music")} ${esc(s.cta)}</a>` : ""}
           </div>
           ${s.image ? `
           <div class="symphonic-media reveal">
@@ -295,6 +306,97 @@
           </div>` : ""}
         </div>
       </section>`;
+  }
+
+  function renderSignup(c) {
+    const f = c.signup;
+    if (!f || !f.show) return "";
+    const number = f.whatsapp || c.site.whatsapp;
+    if (!number) return "";
+    return `
+      <section class="section signup" id="inscripcion">
+        <div class="container signup-grid">
+          <div class="signup-text reveal">
+            <span class="eyebrow">${esc(f.eyebrow)}</span>
+            <h2>${esc(f.title)}</h2>
+            ${paragraphs(f.text)}
+            <ul class="perks">
+              ${(f.perks || []).filter(Boolean).map((p) => `<li><span>${icon("check")}</span>${esc(p)}</li>`).join("")}
+            </ul>
+          </div>
+          <form class="signup-form reveal" id="signup-form" data-wa="${esc(String(number).replace(/\D/g, ""))}" novalidate>
+            <div class="form-head">${icon("whatsapp")}<span>Formulario de inscripción</span></div>
+            <label class="form-field">
+              <span>Nombre completo <em>*</em></span>
+              <input type="text" name="nombre" autocomplete="name" required maxlength="80" placeholder="Ej: Laura Gómez">
+              <small class="err">Escribe tu nombre.</small>
+            </label>
+            <label class="form-field">
+              <span>Teléfono <em>*</em></span>
+              <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="Ej: 300 123 4567">
+              <small class="err">Escribe un teléfono válido (mínimo 7 números).</small>
+            </label>
+            <label class="form-field">
+              <span>Instrumento de interés <em>*</em></span>
+              <select name="instrumento" required>
+                <option value="" selected disabled>Elige una opción</option>
+                ${(f.instruments || []).filter(Boolean).map((i) => `<option>${esc(i)}</option>`).join("")}
+              </select>
+              <small class="err">Elige un instrumento.</small>
+            </label>
+            <label class="form-field">
+              <span>Observaciones</span>
+              <textarea name="observaciones" rows="3" maxlength="500" placeholder="Edad, si ya tocas algún instrumento, horario disponible, preguntas…"></textarea>
+            </label>
+            <button class="btn btn-whatsapp" type="submit">${icon("whatsapp")} ${esc(f.button || "Enviar por WhatsApp")}</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>`;
+  }
+
+  function setupSignup(c) {
+    const form = document.getElementById("signup-form");
+    if (!form) return;
+    const greeting = (c.signup && c.signup.greeting) || "¡Hola! Quiero inscribirme.";
+    const fields = {
+      nombre: (v) => v.trim().length >= 2,
+      telefono: (v) => v.replace(/\D/g, "").length >= 7,
+      instrumento: (v) => !!v
+    };
+    const check = (el) => {
+      const ok = fields[el.name] ? fields[el.name](el.value) : true;
+      el.closest(".form-field").classList.toggle("invalid", !ok);
+      el.setAttribute("aria-invalid", String(!ok));
+      return ok;
+    };
+    form.addEventListener("input", (e) => {
+      if (e.target.closest(".form-field.invalid")) check(e.target);
+    });
+    form.addEventListener("change", (e) => {
+      if (e.target.closest(".form-field.invalid")) check(e.target);
+    });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const els = Object.keys(fields).map((n) => form.elements[n]);
+      const bad = els.filter((el) => !check(el));
+      if (bad.length) { bad[0].focus(); return; }
+      const d = Object.fromEntries(new FormData(form));
+      const lines = [
+        greeting,
+        "",
+        `*Nombre:* ${d.nombre.trim()}`,
+        `*Teléfono:* ${d.telefono.trim()}`,
+        `*Instrumento:* ${d.instrumento}`
+      ];
+      if (d.observaciones && d.observaciones.trim()) lines.push(`*Observaciones:* ${d.observaciones.trim()}`);
+      const url = `https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(lines.join("\n"))}`;
+      const win = window.open(url, "_blank");
+      if (win) win.opener = null;
+      else location.href = url;
+      form.querySelector(".form-note").textContent =
+        "¡Listo! Se abrió WhatsApp con tus datos. Solo falta que pulses Enviar en el chat.";
+    });
   }
 
   /* ---------- Staff ---------- */
@@ -526,7 +628,7 @@
     renderHeader(content, page);
     main.innerHTML = RENDERERS[page](content);
     renderFooter(content);
-    if (page === "home") setupLightbox(content.gallery || []);
+    if (page === "home") { setupLightbox(content.gallery || []); setupSignup(content); }
     setupCopy();
     setupReveal();
     if (location.hash) {
