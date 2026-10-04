@@ -106,7 +106,7 @@ p { margin: 0 0 1em; }
 .menu-toggle { display: none; background: none; border: 0; color: var(--text); width: 48px; height: 48px; border-radius: 10px; cursor: pointer; }
 .menu-toggle svg { width: 28px; height: 28px; }
 
-@media (max-width: 880px) {
+@media (max-width: 1020px) {
   .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
   .nav {
     position: fixed; inset: var(--header-h) 0 auto 0;
@@ -296,6 +296,50 @@ p { margin: 0 0 1em; }
   .symphonic-media { max-width: 340px; order: -1; }
   .symphonic-media .clef { left: -8px; width: 76px; height: 76px; font-size: 2.8rem; }
 }
+
+/* ---------- Inscripción ---------- */
+.signup {
+  background:
+    radial-gradient(60% 70% at 0% 100%, rgba(37, 211, 102, 0.12), transparent 70%),
+    radial-gradient(50% 60% at 100% 0%, rgba(47, 124, 246, 0.16), transparent 70%),
+    var(--bg);
+}
+.signup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
+.signup-text h2 { font-size: clamp(2.6rem, 6vw, 4.2rem); }
+.signup-text p { color: var(--muted); font-size: 1.08rem; }
+.perks { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+.perks li { display: flex; align-items: center; gap: 12px; font-weight: 500; }
+.perks li span { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: rgba(37, 211, 102, 0.16); color: #4be08a; }
+.perks svg { width: 16px; height: 16px; }
+.signup-form {
+  background: #fff; color: #17171c; border-radius: 24px; padding: clamp(22px, 4vw, 34px);
+  box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(212, 165, 55, 0.4);
+}
+.form-head { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-weight: 700; font-size: 1.05rem; }
+.form-head svg { width: 28px; height: 28px; color: #25d366; }
+.form-field { display: block; margin-bottom: 16px; }
+.form-field > span { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+.form-field em { color: #c2410c; font-style: normal; }
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%; min-height: 50px; padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid #d9d6cf; background: #faf9f6; color: #17171c;
+  font: 400 1rem/1.4 var(--font-body); appearance: none; -webkit-appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; padding-right: 42px;
+}
+.form-field textarea { resize: vertical; min-height: 96px; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(212, 165, 55, 0.25); }
+.form-field .err { display: none; color: #b91c1c; font-size: 0.82rem; margin-top: 4px; }
+.form-field.invalid input, .form-field.invalid select { border-color: #dc2626; }
+.form-field.invalid .err { display: block; }
+.btn-whatsapp { width: 100%; background: #25d366; color: #fff; font-size: 1rem; min-height: 54px; }
+.btn-whatsapp:hover { background: #1ebe5b; box-shadow: 0 12px 28px -10px rgba(37, 211, 102, 0.7); }
+.form-note { margin: 12px 0 0; font-size: 0.9rem; color: #15803d; text-align: center; }
+.form-note:empty { display: none; }
+@media (max-width: 880px) { .signup-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Galería ---------- */
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }

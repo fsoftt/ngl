@@ -119,6 +119,33 @@
     ],
     "cta": "Quiero ser parte"
   },
+  "signup": {
+    "show": true,
+    "eyebrow": "Inscripciones",
+    "title": "Inscríbete en NGL",
+    "text": "Llena el formulario y se abrirá un chat de WhatsApp con tus datos listos para enviar. No necesitas experiencia: te enseñamos desde cero.",
+    "perks": [
+      "Sin costo",
+      "No necesitas saber música",
+      "Te respondemos por WhatsApp"
+    ],
+    "whatsapp": "573023163683",
+    "instruments": [
+      "Aún no sé, quiero aprender",
+      "Trompeta",
+      "Trombón",
+      "Clarinete",
+      "Melódica",
+      "Lira",
+      "Redoblante",
+      "Bombo",
+      "Timbales",
+      "Latina Line (danza y banderas)",
+      "Otro"
+    ],
+    "greeting": "¡Hola NGL! 👋 Quiero inscribirme en la banda.",
+    "button": "Enviar por WhatsApp"
+  },
   "gallery": [
     {
       "image": "assets/img/posts/banderas.jpg",

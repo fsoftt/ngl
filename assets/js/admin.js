@@ -100,7 +100,22 @@
             { key: "title", label: "Título" },
             { key: "text", label: "Texto" }
           ] },
-        { key: "cta", label: "Texto del botón", help: "Lleva a WhatsApp (o a Instagram si no hay WhatsApp). Déjalo vacío para ocultar el botón." }
+        { key: "cta", label: "Texto del botón", help: "Lleva al formulario de inscripción (si está activo). Déjalo vacío para ocultar el botón." }
+      ]
+    },
+    {
+      id: "inscripcion", label: "Inscripción", intro: "Formulario que abre un chat de WhatsApp con los datos de la persona.",
+      root: (c) => { if (!c.signup) c.signup = { show: false, instruments: [], perks: [] }; return c.signup; },
+      fields: [
+        { key: "show", label: "Mostrar el formulario en el sitio", type: "checkbox" },
+        { key: "whatsapp", label: "Número de WhatsApp que recibe las inscripciones", help: "Con indicativo, solo números. Ej: 573023163683" },
+        { key: "eyebrow", label: "Texto pequeño superior" },
+        { key: "title", label: "Título" },
+        { key: "text", label: "Texto", type: "textarea" },
+        { key: "perks", label: "Beneficios (con ✓)", type: "strings", of: "text" },
+        { key: "instruments", label: "Opciones de instrumento", type: "strings", of: "text", help: "Aparecen en la lista desplegable del formulario." },
+        { key: "greeting", label: "Saludo al inicio del mensaje", help: "Debajo se agregan nombre, teléfono, instrumento y observaciones." },
+        { key: "button", label: "Texto del botón" }
       ]
     },
     {
