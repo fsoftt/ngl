@@ -1,0 +1,127 @@
+{
+  "site": {
+    "name": "Nueva Generación Latina",
+    "shortName": "NGL",
+    "description": "Banda Músico Marcial Nueva Generación Latina: proyecto social en Dosquebradas que enseña música desde cero a niños y jóvenes.",
+    "location": "Dosquebradas, Risaralda · Colombia",
+    "logo": "assets/img/logo.png",
+    "instagram": "https://www.instagram.com/nueva_generacion_latina/",
+    "tiktok": "https://www.tiktok.com/@bandamusicomarcial_ngl1",
+    "whatsapp": "",
+    "email": "",
+    "rehearsals": "Horario de ensayos por confirmar"
+  },
+  "hero": {
+    "eyebrow": "Banda Músico Marcial · Dosquebradas",
+    "title": "Nueva Generación Latina",
+    "tagline": "Un solo ritmo, un solo corazón.",
+    "text": "Somos un proyecto social que enseña música desde cero a niños y jóvenes. Aquí nadie necesita saber tocar para empezar: solo ganas de aprender y de ser parte de una familia.",
+    "images": [
+      "assets/img/posts/redoblantes-atardecer.jpg",
+      "assets/img/posts/banderas.jpg",
+      "assets/img/posts/trompetas.jpg"
+    ]
+  },
+  "marquee": [
+    "Windline",
+    "Drumline",
+    "Latina Line",
+    "Un solo ritmo, un solo corazón",
+    "#NGL"
+  ],
+  "stats": [
+    { "value": "100%", "label": "Gratis para los estudiantes" },
+    { "value": "3", "label": "Secciones: vientos, percusión y Latina Line" },
+    { "value": "Desde 0", "label": "No necesitas saber música" },
+    { "value": "1", "label": "Gran familia" }
+  ],
+  "about": {
+    "title": "Más que una banda, una familia",
+    "text": "Nueva Generación Latina nace en Dosquebradas con una idea sencilla: que cualquier niño o joven pueda aprender a tocar un instrumento, sin importar de dónde viene.\n\nEn cada ensayo trabajamos la disciplina, el trabajo en equipo y la confianza. Muchos de nuestros integrantes llegaron sin haber tocado nunca un instrumento; hoy desfilan, se presentan y le enseñan a los que vienen detrás.",
+    "image": "assets/img/posts/un-solo-ritmo.jpg",
+    "image2": "assets/img/posts/xilofonos.jpg",
+    "pillars": [
+      { "icon": "music", "title": "Enseñamos desde cero", "text": "Lectura musical, técnica e interpretación paso a paso, con paciencia." },
+      { "icon": "users", "title": "Trabajo en equipo", "text": "En una banda marcial nadie suena solo: aprendemos a escucharnos." },
+      { "icon": "heart", "title": "Proyecto social", "text": "Ocupamos el tiempo libre de los jóvenes en algo que los hace crecer." }
+    ]
+  },
+  "sections": [
+    {
+      "name": "Windline",
+      "image": "assets/img/secciones/windline.png",
+      "text": "La sección de vientos: trompetas, trombones, melódicas y más. Llevan la melodía de cada presentación."
+    },
+    {
+      "name": "Drumline",
+      "image": "assets/img/secciones/drumline.png",
+      "text": "Redoblantes, bombos, liras y timbales. El corazón rítmico que pone a marchar a toda la banda."
+    },
+    {
+      "name": "Latina Line",
+      "image": "assets/img/secciones/latina-line.png",
+      "text": "Danza, banderas y color. La sección que convierte cada desfile en un espectáculo."
+    },
+    {
+      "name": "Ensayos",
+      "image": "assets/img/secciones/ngl.png",
+      "text": "Donde pasa la magia: práctica, risas, paseos y mucha disciplina."
+    }
+  ],
+  "gallery": [
+    { "image": "assets/img/posts/banderas.jpg", "caption": "Latina Line en ensayo", "link": "", "video": false },
+    { "image": "assets/img/posts/vientos-ensayo.jpg", "caption": "Ensayo de vientos", "link": "", "video": false },
+    { "image": "assets/img/posts/xilofonos.jpg", "caption": "Liras en desfile", "link": "", "video": false },
+    { "image": "assets/img/posts/feeling-good.jpg", "caption": "Feeling Good", "link": "", "video": true },
+    { "image": "assets/img/posts/gracias.jpg", "caption": "¡Gracias!", "link": "", "video": true },
+    { "image": "assets/img/posts/tambor.jpg", "caption": "Nueva Generación Latina", "link": "", "video": true },
+    { "image": "assets/img/posts/clarinete.jpg", "caption": "Ensayo general", "link": "", "video": true },
+    { "image": "assets/img/posts/formacion.jpg", "caption": "Formación", "link": "", "video": true },
+    { "image": "assets/img/posts/paseo-rio.jpg", "caption": "Después del ensayo... ¡paseo al río!", "link": "", "video": true },
+    { "image": "assets/img/posts/marcha-del-huevo.jpg", "caption": "Mini vlog: Marcha del huevo", "link": "", "video": true },
+    { "image": "assets/img/posts/grupo-noche.jpg", "caption": "La familia NGL", "link": "", "video": true },
+    { "image": "assets/img/posts/timbales.jpg", "caption": "Timbales", "link": "", "video": true },
+    { "image": "assets/img/posts/redoblantes-atardecer.jpg", "caption": "Redoblantes al atardecer", "link": "", "video": true },
+    { "image": "assets/img/posts/melodica.jpg", "caption": "Practicando melódica en casa", "link": "", "video": true },
+    { "image": "assets/img/posts/ensayos.jpg", "caption": "¿Ustedes qué hacen en los ensayos?", "link": "", "video": true },
+    { "image": "assets/img/posts/celebracion.jpg", "caption": "¡Celebrando juntos!", "link": "", "video": true }
+  ],
+  "staff": {
+    "intro": "Las personas que, ensayo tras ensayo, hacen posible Nueva Generación Latina.",
+    "director": {
+      "name": "Yonathan Plata",
+      "role": "Director",
+      "photo": "",
+      "bio": "Fundador y director de la banda. Escribe aquí una breve historia: su trayectoria musical y por qué creó Nueva Generación Latina.",
+      "instagram": "https://www.instagram.com/yonathanplata.28/"
+    },
+    "teachers": [
+      { "name": "Nombre del profesor", "role": "Instructor de Windline", "photo": "", "bio": "Breve descripción del profesor." },
+      { "name": "Nombre del profesor", "role": "Instructor de Drumline", "photo": "", "bio": "Breve descripción del profesor." },
+      { "name": "Nombre de la profesora", "role": "Instructora de Latina Line", "photo": "", "bio": "Breve descripción de la profesora." }
+    ],
+    "studentOfMonth": {
+      "month": "Octubre 2026",
+      "name": "Nombre del estudiante",
+      "instrument": "Instrumento",
+      "photo": "assets/img/posts/melodica.jpg",
+      "text": "Por su compromiso, puntualidad y las ganas que le pone a cada ensayo. ¡Felicitaciones!"
+    }
+  },
+  "donate": {
+    "title": "Tu aporte suena más fuerte",
+    "text": "Somos un proyecto sin ánimo de lucro. Cada donación se convierte en instrumentos, uniformes, transporte y refrigerios para que más niños puedan aprender música.",
+    "uses": [
+      { "amount": "$20.000", "label": "Un juego de baquetas o una boquilla" },
+      { "amount": "$50.000", "label": "Refrigerio para un ensayo completo" },
+      { "amount": "$100.000", "label": "Transporte de la banda a una presentación" },
+      { "amount": "$300.000+", "label": "Un instrumento nuevo para un estudiante" }
+    ],
+    "methods": [
+      { "name": "Nequi", "value": "300 000 0000", "holder": "Nombre del titular", "link": "", "qr": "" },
+      { "name": "Bancolombia · Ahorros", "value": "000-000000-00", "holder": "Nombre del titular", "link": "", "qr": "" },
+      { "name": "Daviplata", "value": "300 000 0000", "holder": "Nombre del titular", "link": "", "qr": "" }
+    ],
+    "inKind": "¿Tienes un instrumento que ya no usas? ¡Dónalo! También recibimos uniformes, atriles, parches y repuestos. Escríbenos y coordinamos la entrega."
+  }
+}

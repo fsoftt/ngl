@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel · Nueva Generación Latina</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+  <!-- Inicio de sesión -->
+  <section id="login" class="login">
+    <form class="login-card" id="login-form" autocomplete="off">
+      <img src="assets/img/logo.png" alt="" width="96" height="96">
+      <h1 class="gold-text">Panel NGL</h1>
+      <p>Inicia sesión con tu <strong>clave de GitHub</strong> para editar el contenido del sitio.</p>
+      <label class="field">
+        <span>Clave de acceso (token)</span>
+        <input type="password" id="token" required placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="check"><input type="checkbox" id="remember"> Recordar en este dispositivo</label>
+      <button class="btn btn-gold" type="submit" id="login-btn">Entrar</button>
+      <p class="error" id="login-error" role="alert"></p>
+      <details class="help">
+        <summary>¿Cómo obtengo mi clave?</summary>
+        <ol>
+          <li>Inicia sesión en GitHub con una cuenta que tenga acceso al repositorio <code id="repo-name"></code>.</li>
+          <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Crear token (fine-grained)</a>.</li>
+          <li>En <em>Repository access</em> elige <strong>Only select repositories</strong> y selecciona el repositorio.</li>
+          <li>En <em>Permissions → Repository permissions</em> pon <strong>Contents: Read and write</strong>.</li>
+          <li>Genera el token, cópialo y pégalo aquí. Guárdalo en un lugar seguro: no lo compartas.</li>
+        </ol>
+      </details>
+      <a class="back" href="index.html">← Volver al sitio</a>
+    </form>
+  </section>
+
+  <!-- Editor -->
+  <section id="editor" class="editor hidden">
+    <header class="admin-bar">
+      <a class="brand" href="index.html" target="_blank" rel="noopener">
+        <img src="assets/img/logo.png" alt="" width="40" height="40">
+        <span class="brand-text"><strong class="gold-text">Panel NGL</strong><span id="user-name"></span></span>
+      </a>
+      <div class="admin-actions">
+        <span class="status" id="status" aria-live="polite"></span>
+        <a class="btn btn-outline btn-sm" href="index.html" target="_blank" rel="noopener">Ver sitio</a>
+        <button class="btn btn-gold btn-sm" id="publish" disabled>Publicar cambios</button>
+        <button class="btn btn-sm btn-ghost" id="logout">Salir</button>
+      </div>
+    </header>
+    <div class="admin-layout">
+      <nav class="tabs" id="tabs" aria-label="Secciones del contenido"></nav>
+      <div class="panel" id="panel"></div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
