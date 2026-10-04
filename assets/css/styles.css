@@ -240,6 +240,63 @@ p { margin: 0 0 1em; }
 @media (max-width: 1000px) { .band-sections { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .band-sections { grid-template-columns: 1fr; } }
 
+/* ---------- Proyecto sinfónico ---------- */
+.symphonic {
+  overflow: hidden; color: #1d1708;
+  background:
+    radial-gradient(70% 90% at 100% 0%, rgba(212, 165, 55, 0.35), transparent 60%),
+    linear-gradient(180deg, #fbf5e6, #f1e5c6);
+}
+.staff-lines {
+  position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%) rotate(-4deg);
+  display: grid; gap: 16px; pointer-events: none; opacity: 0.35;
+}
+.staff-lines span { display: block; height: 1px; background: linear-gradient(90deg, transparent, #b8902f 15%, #b8902f 85%, transparent); }
+.symphonic-grid { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
+.soon-badge {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;
+  padding: 8px 16px; border-radius: 999px; background: #121014; color: var(--gold-light);
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  box-shadow: 0 0 0 4px rgba(212, 165, 55, 0.3);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+.soon-badge svg { width: 16px; height: 16px; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 9px rgba(212, 165, 55, 0.08); } }
+.symphonic .eyebrow { display: flex; color: #8c6519; }
+.symphonic .eyebrow::before { background: #8c6519; }
+.symphonic h2 {
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  background: linear-gradient(180deg, #2a1f08 0%, #6e4e12 70%, #a87a22 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.symphonic .body p { color: #4a4030; font-size: 1.08rem; }
+.symphonic-highlights { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 12px; }
+.symphonic-highlights li {
+  display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(140, 101, 25, 0.25);
+}
+.hl-icon { flex: none; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: #121014; color: var(--gold-light); }
+.hl-icon svg { width: 22px; height: 22px; }
+.symphonic-highlights strong { display: block; font-weight: 600; }
+.symphonic-highlights li span:not(.hl-icon) { color: #5c5240; font-size: 0.93rem; }
+.symphonic-media { position: relative; max-width: 440px; width: 100%; margin-inline: auto; }
+.symphonic-media .frame {
+  padding: 12px; border-radius: 220px 220px 24px 24px; background: linear-gradient(180deg, #e9c766, #a87a22);
+  box-shadow: 0 30px 60px -25px rgba(60, 40, 0, 0.6);
+}
+.symphonic-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 210px 210px 16px 16px; }
+.symphonic-media .clef {
+  position: absolute; left: -28px; bottom: -20px; width: 96px; height: 96px; border-radius: 50%;
+  display: grid; place-items: center; background: #121014; color: var(--gold-light);
+  font-size: 3.6rem; line-height: 1; box-shadow: 0 0 0 6px #fbf5e6, var(--shadow);
+}
+@media (max-width: 880px) {
+  .symphonic-grid { grid-template-columns: 1fr; }
+  .staff-lines { display: none; }
+  .symphonic-media { max-width: 340px; order: -1; }
+  .symphonic-media .clef { left: -8px; width: 76px; height: 76px; font-size: 2.8rem; }
+}
+
 /* ---------- Galería ---------- */
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .gallery-item {

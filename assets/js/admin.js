@@ -15,7 +15,8 @@
   /* ---------- Esquema del formulario ---------- */
   const ICON_OPTIONS = [
     ["music", "Nota musical"], ["users", "Personas"], ["heart", "Corazón"],
-    ["star", "Estrella"], ["drum", "Tambor"], ["trophy", "Trofeo"]
+    ["star", "Estrella"], ["drum", "Tambor"], ["trophy", "Trofeo"],
+    ["calendar", "Calendario"], ["sparkles", "Destellos"]
   ];
 
   const TABS = [
@@ -80,6 +81,26 @@
             { key: "image", label: "Imagen (redonda)", type: "image" },
             { key: "text", label: "Descripción", type: "textarea" }
           ] }
+      ]
+    },
+    {
+      id: "sinfonico", label: "Sinfónico", intro: "Anuncio del proyecto sinfónico en la página de inicio.",
+      root: (c) => { if (!c.symphonic) c.symphonic = { show: false, highlights: [] }; return c.symphonic; },
+      fields: [
+        { key: "show", label: "Mostrar esta sección en el sitio", type: "checkbox" },
+        { key: "badge", label: "Etiqueta", help: "Ej: Próximamente, ¡Inscripciones abiertas!, ¡Ya empezamos!" },
+        { key: "eyebrow", label: "Texto pequeño superior" },
+        { key: "title", label: "Título" },
+        { key: "text", label: "Texto", type: "textarea", help: "Deja una línea en blanco para separar párrafos." },
+        { key: "image", label: "Foto", type: "image" },
+        { key: "highlights", label: "Puntos destacados", type: "list", itemTitle: (it) => it.title,
+          newItem: { icon: "music", title: "", text: "" },
+          fields: [
+            { key: "icon", label: "Ícono", type: "select", options: ICON_OPTIONS },
+            { key: "title", label: "Título" },
+            { key: "text", label: "Texto" }
+          ] },
+        { key: "cta", label: "Texto del botón", help: "Lleva a WhatsApp (o a Instagram si no hay WhatsApp). Déjalo vacío para ocultar el botón." }
       ]
     },
     {
