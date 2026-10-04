@@ -18,6 +18,8 @@
     drum: '<ellipse cx="12" cy="7" rx="9" ry="3"/><path d="M3 7v8c0 1.7 4 3 9 3s9-1.3 9-3V7M7 2l5 5M17 2l-5 5"/>',
     trophy: '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2-1.2.5-2 2-2 3.8M14 14.7V17c0 .6.5 1 1 1.2 1.2.5 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/>',
     gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/>',
+    calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+    sparkles: '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M17 5h4M5 17v4M3 19h4"/>',
     copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
     link: '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>',
     mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/>',
@@ -47,6 +49,7 @@
     const links = [
       ["index.html", "Inicio", "home"],
       ["index.html#nosotros", "Nosotros", ""],
+      ...(c.symphonic && c.symphonic.show ? [["index.html#sinfonico", "Sinfónico", ""]] : []),
       ["index.html#galeria", "Galería", ""],
       ["staff.html", "Staff", "staff"]
     ];
@@ -104,6 +107,7 @@
             <ul>
               <li><a href="index.html#nosotros">Nosotros</a></li>
               <li><a href="index.html#secciones">Secciones</a></li>
+              ${c.symphonic && c.symphonic.show ? `<li><a href="index.html#sinfonico">Proyecto sinfónico</a></li>` : ""}
               <li><a href="index.html#galeria">Galería</a></li>
               <li><a href="staff.html">Staff</a></li>
               <li><a href="donar.html">Donar</a></li>
@@ -213,6 +217,8 @@
         </div>
       </section>
 
+      ${renderSymphonic(c)}
+
       <section class="section section-alt" id="galeria">
         <div class="container">
           <div class="section-head center reveal">
@@ -257,6 +263,36 @@
             </div>
             <a class="btn btn-dark" href="donar.html">${icon("heart")} Quiero donar</a>
           </div>
+        </div>
+      </section>`;
+  }
+
+  function renderSymphonic(c) {
+    const s = c.symphonic;
+    if (!s || !s.show) return "";
+    const link = c.site.whatsapp
+      ? waLink(c.site.whatsapp, "¡Hola NGL! Quiero información sobre el proyecto sinfónico.")
+      : c.site.instagram;
+    return `
+      <section class="section symphonic" id="sinfonico">
+        <div class="staff-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="container symphonic-grid">
+          <div class="symphonic-text reveal">
+            ${s.badge ? `<span class="soon-badge">${icon("sparkles")} ${esc(s.badge)}</span>` : ""}
+            <span class="eyebrow">${esc(s.eyebrow)}</span>
+            <h2>${esc(s.title)}</h2>
+            <div class="body">${paragraphs(s.text)}</div>
+            <ul class="symphonic-highlights">
+              ${(s.highlights || []).map((hl) => `
+                <li><span class="hl-icon">${icon(hl.icon)}</span><div><strong>${esc(hl.title)}</strong><span>${esc(hl.text)}</span></div></li>`).join("")}
+            </ul>
+            ${s.cta && link ? `<a class="btn btn-dark" href="${esc(link)}" target="_blank" rel="noopener">${icon("music")} ${esc(s.cta)}</a>` : ""}
+          </div>
+          ${s.image ? `
+          <div class="symphonic-media reveal">
+            <div class="frame"><img src="${esc(s.image)}" alt="${esc(s.title)}" loading="lazy"></div>
+            <span class="clef" aria-hidden="true">𝄞</span>
+          </div>` : ""}
         </div>
       </section>`;
   }

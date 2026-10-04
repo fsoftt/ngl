@@ -26,14 +26,27 @@
     "Windline",
     "Drumline",
     "Latina Line",
+    "Proyecto sinfónico",
     "Un solo ritmo, un solo corazón",
     "#NGL"
   ],
   "stats": [
-    { "value": "100%", "label": "Gratis para los estudiantes" },
-    { "value": "3", "label": "Secciones: vientos, percusión y Latina Line" },
-    { "value": "Desde 0", "label": "No necesitas saber música" },
-    { "value": "1", "label": "Gran familia" }
+    {
+      "value": "100%",
+      "label": "Gratis para los estudiantes"
+    },
+    {
+      "value": "3",
+      "label": "Secciones: vientos, percusión y Latina Line"
+    },
+    {
+      "value": "Desde 0",
+      "label": "No necesitas saber música"
+    },
+    {
+      "value": "1",
+      "label": "Gran familia"
+    }
   ],
   "about": {
     "title": "Más que una banda, una familia",
@@ -41,9 +54,21 @@
     "image": "assets/img/posts/un-solo-ritmo.jpg",
     "image2": "assets/img/posts/xilofonos.jpg",
     "pillars": [
-      { "icon": "music", "title": "Enseñamos desde cero", "text": "Lectura musical, técnica e interpretación paso a paso, con paciencia." },
-      { "icon": "users", "title": "Trabajo en equipo", "text": "En una banda marcial nadie suena solo: aprendemos a escucharnos." },
-      { "icon": "heart", "title": "Proyecto social", "text": "Ocupamos el tiempo libre de los jóvenes en algo que los hace crecer." }
+      {
+        "icon": "music",
+        "title": "Enseñamos desde cero",
+        "text": "Lectura musical, técnica e interpretación paso a paso, con paciencia."
+      },
+      {
+        "icon": "users",
+        "title": "Trabajo en equipo",
+        "text": "En una banda marcial nadie suena solo: aprendemos a escucharnos."
+      },
+      {
+        "icon": "heart",
+        "title": "Proyecto social",
+        "text": "Ocupamos el tiempo libre de los jóvenes en algo que los hace crecer."
+      }
     ]
   },
   "sections": [
@@ -68,23 +93,129 @@
       "text": "Donde pasa la magia: práctica, risas, paseos y mucha disciplina."
     }
   ],
+  "symphonic": {
+    "show": true,
+    "badge": "Próximamente",
+    "eyebrow": "Una nueva etapa",
+    "title": "Proyecto Sinfónico",
+    "text": "¡Ya casi empezamos! Nueva Generación Latina da un nuevo paso: nuestro proyecto sinfónico. Vamos a llevar la música de la banda del desfile a la sala de concierto, con nuevo repertorio y más espacios para que niños y jóvenes sigan creciendo como músicos.\n\nMuy pronto compartiremos las fechas de inicio y cómo inscribirse. ¡Síguenos en redes para no perderte nada!",
+    "image": "assets/img/posts/vientos-ensayo.jpg",
+    "highlights": [
+      {
+        "icon": "music",
+        "title": "Repertorio de concierto",
+        "text": "Obras para escuchar en sala, más allá de la marcha."
+      },
+      {
+        "icon": "users",
+        "title": "Abierto a nuevos músicos",
+        "text": "Estudiantes actuales y nuevos integrantes podrán sumarse."
+      },
+      {
+        "icon": "calendar",
+        "title": "Inscripciones muy pronto",
+        "text": "Anunciaremos las fechas por nuestras redes."
+      }
+    ],
+    "cta": "Quiero ser parte"
+  },
   "gallery": [
-    { "image": "assets/img/posts/banderas.jpg", "caption": "Latina Line en ensayo", "link": "", "video": false },
-    { "image": "assets/img/posts/vientos-ensayo.jpg", "caption": "Ensayo de vientos", "link": "", "video": false },
-    { "image": "assets/img/posts/xilofonos.jpg", "caption": "Liras en desfile", "link": "", "video": false },
-    { "image": "assets/img/posts/feeling-good.jpg", "caption": "Feeling Good", "link": "", "video": true },
-    { "image": "assets/img/posts/gracias.jpg", "caption": "¡Gracias!", "link": "", "video": true },
-    { "image": "assets/img/posts/tambor.jpg", "caption": "Nueva Generación Latina", "link": "", "video": true },
-    { "image": "assets/img/posts/clarinete.jpg", "caption": "Ensayo general", "link": "", "video": true },
-    { "image": "assets/img/posts/formacion.jpg", "caption": "Formación", "link": "", "video": true },
-    { "image": "assets/img/posts/paseo-rio.jpg", "caption": "Después del ensayo... ¡paseo al río!", "link": "", "video": true },
-    { "image": "assets/img/posts/marcha-del-huevo.jpg", "caption": "Mini vlog: Marcha del huevo", "link": "", "video": true },
-    { "image": "assets/img/posts/grupo-noche.jpg", "caption": "La familia NGL", "link": "", "video": true },
-    { "image": "assets/img/posts/timbales.jpg", "caption": "Timbales", "link": "", "video": true },
-    { "image": "assets/img/posts/redoblantes-atardecer.jpg", "caption": "Redoblantes al atardecer", "link": "", "video": true },
-    { "image": "assets/img/posts/melodica.jpg", "caption": "Practicando melódica en casa", "link": "", "video": true },
-    { "image": "assets/img/posts/ensayos.jpg", "caption": "¿Ustedes qué hacen en los ensayos?", "link": "", "video": true },
-    { "image": "assets/img/posts/celebracion.jpg", "caption": "¡Celebrando juntos!", "link": "", "video": true }
+    {
+      "image": "assets/img/posts/banderas.jpg",
+      "caption": "Latina Line en ensayo",
+      "link": "",
+      "video": false
+    },
+    {
+      "image": "assets/img/posts/vientos-ensayo.jpg",
+      "caption": "Ensayo de vientos",
+      "link": "",
+      "video": false
+    },
+    {
+      "image": "assets/img/posts/xilofonos.jpg",
+      "caption": "Liras en desfile",
+      "link": "",
+      "video": false
+    },
+    {
+      "image": "assets/img/posts/feeling-good.jpg",
+      "caption": "Feeling Good",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/gracias.jpg",
+      "caption": "¡Gracias!",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/tambor.jpg",
+      "caption": "Nueva Generación Latina",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/clarinete.jpg",
+      "caption": "Ensayo general",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/formacion.jpg",
+      "caption": "Formación",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/paseo-rio.jpg",
+      "caption": "Después del ensayo... ¡paseo al río!",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/marcha-del-huevo.jpg",
+      "caption": "Mini vlog: Marcha del huevo",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/grupo-noche.jpg",
+      "caption": "La familia NGL",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/timbales.jpg",
+      "caption": "Timbales",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/redoblantes-atardecer.jpg",
+      "caption": "Redoblantes al atardecer",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/melodica.jpg",
+      "caption": "Practicando melódica en casa",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/ensayos.jpg",
+      "caption": "¿Ustedes qué hacen en los ensayos?",
+      "link": "",
+      "video": true
+    },
+    {
+      "image": "assets/img/posts/celebracion.jpg",
+      "caption": "¡Celebrando juntos!",
+      "link": "",
+      "video": true
+    }
   ],
   "staff": {
     "intro": "Las personas que, ensayo tras ensayo, hacen posible Nueva Generación Latina.",
@@ -96,9 +227,24 @@
       "instagram": "https://www.instagram.com/yonathanplata.28/"
     },
     "teachers": [
-      { "name": "Nombre del profesor", "role": "Instructor de Windline", "photo": "", "bio": "Breve descripción del profesor." },
-      { "name": "Nombre del profesor", "role": "Instructor de Drumline", "photo": "", "bio": "Breve descripción del profesor." },
-      { "name": "Nombre de la profesora", "role": "Instructora de Latina Line", "photo": "", "bio": "Breve descripción de la profesora." }
+      {
+        "name": "Nombre del profesor",
+        "role": "Instructor de Windline",
+        "photo": "",
+        "bio": "Breve descripción del profesor."
+      },
+      {
+        "name": "Nombre del profesor",
+        "role": "Instructor de Drumline",
+        "photo": "",
+        "bio": "Breve descripción del profesor."
+      },
+      {
+        "name": "Nombre de la profesora",
+        "role": "Instructora de Latina Line",
+        "photo": "",
+        "bio": "Breve descripción de la profesora."
+      }
     ],
     "studentOfMonth": {
       "month": "Octubre 2026",
@@ -112,15 +258,45 @@
     "title": "Tu aporte suena más fuerte",
     "text": "Somos un proyecto sin ánimo de lucro. Cada donación se convierte en instrumentos, uniformes, transporte y refrigerios para que más niños puedan aprender música.",
     "uses": [
-      { "amount": "$20.000", "label": "Un juego de baquetas o una boquilla" },
-      { "amount": "$50.000", "label": "Refrigerio para un ensayo completo" },
-      { "amount": "$100.000", "label": "Transporte de la banda a una presentación" },
-      { "amount": "$300.000+", "label": "Un instrumento nuevo para un estudiante" }
+      {
+        "amount": "$20.000",
+        "label": "Un juego de baquetas o una boquilla"
+      },
+      {
+        "amount": "$50.000",
+        "label": "Refrigerio para un ensayo completo"
+      },
+      {
+        "amount": "$100.000",
+        "label": "Transporte de la banda a una presentación"
+      },
+      {
+        "amount": "$300.000+",
+        "label": "Un instrumento nuevo para un estudiante"
+      }
     ],
     "methods": [
-      { "name": "Nequi", "value": "300 000 0000", "holder": "Nombre del titular", "link": "", "qr": "" },
-      { "name": "Bancolombia · Ahorros", "value": "000-000000-00", "holder": "Nombre del titular", "link": "", "qr": "" },
-      { "name": "Daviplata", "value": "300 000 0000", "holder": "Nombre del titular", "link": "", "qr": "" }
+      {
+        "name": "Nequi",
+        "value": "300 000 0000",
+        "holder": "Nombre del titular",
+        "link": "",
+        "qr": ""
+      },
+      {
+        "name": "Bancolombia · Ahorros",
+        "value": "000-000000-00",
+        "holder": "Nombre del titular",
+        "link": "",
+        "qr": ""
+      },
+      {
+        "name": "Daviplata",
+        "value": "300 000 0000",
+        "holder": "Nombre del titular",
+        "link": "",
+        "qr": ""
+      }
     ],
     "inKind": "¿Tienes un instrumento que ya no usas? ¡Dónalo! También recibimos uniformes, atriles, parches y repuestos. Escríbenos y coordinamos la entrega."
   }
